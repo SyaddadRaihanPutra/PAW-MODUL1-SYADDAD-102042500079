@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eaeaea;
+    color: #333333;
+    font-family: "Poppins";
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+}
+
+.logo {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #af1921;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    font-size: 0.9375rem;
+}
+
+nav a {
+    color: #666666;
+}
+
+nav a:hover {
+    color: #333333;
+}
+
+section.hero {
+    padding: 50px 20px;
+}
+
+.hero-content {
+    background-color: white;
+    border-radius: 20px;
+    min-height: 400px;
+    color: #af1921;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.hero-content .kolom1 {
+    margin-top: 30px;
+}
+
+.hero-content .kolom1 a.cta {
+    border: 1px solid #af1921;
+    color: #af1921;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.hero-content .kolom1 a.cta:hover {
+    background: #af1921;
+    color: white;
+}
+
+.hero-content .kolom2 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.hero-content .kolom2 img {
+    width: 300px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #af1921;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: background 150ms ease;
+}
+
+.btn:hover {
+    background: #8c141a;
+}
+
+.btn:disabled {
+    background: #eaeaea;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.catalog {
+    padding-bottom: 64px;
+}
+
+.section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.section-head h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section-head span {
+    font-size: 0.875rem;
+    color: var(--muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+}
+
+.kategori {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.card h3 {
+    font-weight: 700;
+}
+
+.harga {
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.harga-now {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.harga-asli {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.diskon {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #FEF2F2;
+    color: #dc3545;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-ada {
+    color: #28a745;
+}
+
+.status-habis {
+    color: red;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+footer {
+    border-top: 1px solid #eaeaea;
+    padding: 28px 0 40px;
+    font-size: 0.875rem;
+    color: #666666;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 16px;
+        font-size: 0.875rem;
+    }
+
+    .hero {
+        padding: 40px 0 32px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
